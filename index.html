@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Alert</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <script>
+        // function deleteRow(r) {
+        //     var i = r.parentNode.parentNode.rowIndex;
+        //     document.getElementById("studentTable").deleteRow(i);
+        // }
+
+        function changeImage() {
+            document.getElementById("myImage").src = "./img_4.jpg";
+        }
+
+        function originalImage() {
+            document.getElementById("myImage").src = "./img_5.jpg";
+        }
+        let counter = 0;
+
+        function increase() {
+            counter++;
+            document.getElementById("counterDisplay").innerText = counter;
+        }
+
+        function decrease() {
+            counter--;
+            document.getElementById("counterDisplay").innerText = counter;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 1. Show an Alert Box on Click of a Link: -->
+
+    <a href="#" onclick="alert('You clicked the link!')">Click me</a>
+
+    <!-- 2. Display Mobile Images and Show an Alert on Click: -->
+<br>
+    <img src="./img_1.jpg" alt="Mobile 1" onclick="alert('You clicked Mobile 1!')" width="200">
+    <br>
+    <img src="./img_2.jpg" alt="Mobile 2" onclick="alert('You clicked Mobile 2!')" width="200">
+
+    <!-- 3. Display 10 Student Records in a Table with Delete Button for Each Row: -->
+
+    <!-- <table id="studentTable" border="2"></table>
+    <tr>
+        <th>Student Name</th>
+        <th>Delete</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+        <td>Mark</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+        <td>Sara</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    </table> -->
+
+    <!-- 4. Change an Image on Mouseover and Revert on Mouseout: -->
+<br>
+    <img id="myImage" src="./hero_1.jpg" alt="Image" width="300" onmouseover="changeImage()"
+        onmouseout="originalImage()">
+
+
+    <!-- 5. Show a Counter with Increase and Decrease Buttons: -->
+
+    <h2>Counter: <span id="counterDisplay">0</span></h2>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+
+    
+</body>
+
+</html>
